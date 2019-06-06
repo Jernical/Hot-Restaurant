@@ -1,0 +1,23 @@
+#header{
+   text-align:center
+}
+#head{
+   border-bottom: solid 1px grey;
+}
+#viewBtn{
+   background-color:blue;
+   color:white
+}
+#formContainer{
+   border:1px solid grey;
+   padding:20px;
+}
+#linkDiv{
+   padding:30px;
+
+
+}
+#tableLink{
+   padding:5px;
+   border-right:1px solid grey;
+}

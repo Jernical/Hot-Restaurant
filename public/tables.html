@@ -21,7 +21,8 @@
             <br>
 
             <div class="text-center">
-                <a href="/reserve"><button id="reserve" class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span> Make
+                <a href="./reserve.html"><button id="reserve" class="btn btn-lg btn-danger"><span
+                            class="fa fa-credit-card"></span> Make
                         Reservation</button></a>
             </div>
         </div>
@@ -60,43 +61,70 @@
 
 </body>
 
-<script type = 'text/javascript'>
-
+<script type='text/javascript'>
 
     var tables = [
-       {
-           partyName: 'donaldsons',
-           partySize: 4,
-           partyEmail: 'blahblahblah@gmail.com',
-       },
-       {
-           partyName:"the incredibles",
-           partySize: 12,
-           partyEmail: 'whereismysupersuit@hotmail.com'
-       },
-       {
-           partyName: 'les miserables',
-           partySize: 1,
-           partyEmail: 'whatistheinternet@earthlink.net'
-       },
-       {
-           partyName: 'robbery party',
-           partySize: 20,
-           partyEmail: 'nigerianprince@yahoo.com'
-       },
-       {
-           partyName: 'the animaniacs',
-           partySize: 300,
-           partyEmail: 'alskjdfwaejl;aksdjfl;ahouhroqewuihqowiejpqoiwejr!@gmail.com'
-       },
-       {
-           partyName: 'simpsons',
-           partySize: 5,
-           partyEmail: 'bartsimponrulez@gmail.com'
-       }
-    
+        {
+            partyName: 'donaldsons',
+            partySize: 4,
+            partyEmail: 'blahblahblah@gmail.com',
+        },
+        {
+            partyName: "the incredibles",
+            partySize: 12,
+            partyEmail: 'whereismysupersuit@hotmail.com'
+        },
+        {
+            partyName: 'les miserables',
+            partySize: 1,
+            partyEmail: 'whatistheinternet@earthlink.net'
+        },
+        {
+            partyName: 'robbery party',
+            partySize: 20,
+            partyEmail: 'nigerianprince@yahoo.com'
+        },
+        {
+            partyName: 'the animaniacs',
+            partySize: 300,
+            partyEmail: 'alskjdfwaejl;aksdjfl;ahouhroqewuihqowiejpqoiwejr!@gmail.com'
+        },
+        {
+            partyName: 'simpsons',
+            partySize: 5,
+            partyEmail: 'bartsimponrulez@gmail.com'
+        }
+
     ]
-    
-    </script>
+    if (tables.length < 6){
+    for (let i = 0; i < tables.length; i++) {
+        var newPartyName = $("<p>").text(tables[i].partyName);
+        var newPartySize = $("<p>").text(tables[i].partySize);
+        var newPartyEmail = $("<p>").text(tables[i].partyEmail);
+        var newReservation = $("<div>").addClass('reservations');
+        newReservation.append(newPartyName, newPartySize, newPartyEmail);
+        $("#tableSection").append(newReservation);
+    }
+} else {
+    for (let i = 0; i < 5; i++) {
+        var newPartyName = $("<p>").text(tables[i].partyName);
+        var newPartySize = $("<p>").text(tables[i].partySize);
+        var newPartyEmail = $("<p>").text(tables[i].partyEmail);
+        var newReservation = $("<div>").addClass('reservations');
+        newReservation.append(newPartyName, newPartySize, newPartyEmail);
+        $("#tableSection").append(newReservation);
+    }
+    for (let i = 5; i < tables.length; i++) {
+        var newPartyName = $("<p>").text(tables[i].partyName);
+        var newPartySize = $("<p>").text(tables[i].partySize);
+        var newPartyEmail = $("<p>").text(tables[i].partyEmail);
+        var newReservation = $("<div>").addClass('reservations');
+        newReservation.append(newPartyName, newPartySize, newPartyEmail);
+        $("#waitlistSection").append(newReservation);
+    }
+
+}
+
+</script>
 
 </html>
