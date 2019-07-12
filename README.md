@@ -15,4 +15,4 @@ npm install
 Open git in the repo and do ``node server.js``
 
 ## Step Four (Go to localhost) ##
-Open any browser and type in http://localhost:8080
+Open any browser and type in http://localhost:3100/
